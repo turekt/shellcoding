@@ -1,4 +1,4 @@
-# TCP bind x64 shellcode
+# TCP bind shell x64 shellcode
 
 Listing:
 - `bind.c` - TCP bind C code

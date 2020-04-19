@@ -21,21 +21,21 @@ c: folder
 asm: folder
 	$(NASM) -felf64 -o $(OUT)/$(PROJECT).o $(PROJECT)/$(PROJECT).s
 	$(LD) -o $(OUT)/$(PROJECT) $(OUT)/$(PROJECT).o
-	
+
 .PHONY: shcd
 shcd: folder
 	$(NASM) -felf64 -o $(OUT)/$(PROJECT)_sh.o $(PROJECT)/$(PROJECT)_sh.s
 	$(LD) -o $(OUT)/$(PROJECT) $(OUT)/$(PROJECT)_sh.o
 	$(OBJCOPY) -O binary $(OUT)/$(PROJECT) $(OUT)/shellcode
-	
+
 .PHONY: shellcode
-shellcode: shcd	
+shellcode: shcd
 	$(HEXDUMP) -v -e '"\\x" 1/1 "%02x"' $(OUT)/shellcode
-	
+
 .PHONY: disasm
 disasm: shcd
 	$(NDISASM) -b64 $(OUT)/shellcode
-	
+
 .PHONY: shellcode-test
 skeleton: shellcode
 	$(eval HEX=$(shell $(HEXDUMP) -v -e '"\\\\x" 1/1 "%02x"' $(OUT)/shellcode))

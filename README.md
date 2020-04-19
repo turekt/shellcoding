@@ -2,7 +2,8 @@
 
 `PROJECT` listing:
 - `hello` - Hello, World x64
-- `bind` - TCP bind x64
+- `bind` - TCP bind shell x64
+- `reverse` - TCP reverse shell x64
 
 ## Compiling via Makefile
 
