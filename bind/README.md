@@ -5,7 +5,7 @@ Listing:
 - `bind.s` - asm rewrite of C code
 - `bind_sh.s` - adapted asm for shellcode
 
-## Compiling
+## Usage
 
 Use `make (target) PROJECT=bind`.
 

@@ -5,7 +5,7 @@ Listing:
 - `hello.s` - asm rewrite of C code
 - `hello_sh.s` - adapted asm for shellcode
 
-## Compiling
+## Usage
 
 Use `make (target) PROJECT=hello`.
 

@@ -5,7 +5,7 @@ Listing:
 - `reverse.s` - asm rewrite of C code
 - `reverse_sh.s` - adapted asm for shellcode
 
-## Compiling
+## Usage
 
 Use `make (target) PROJECT=reverse`.
 
